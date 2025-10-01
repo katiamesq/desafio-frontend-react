@@ -1,19 +1,29 @@
-export function CardProducts (){
+import PlantImage from '../assets/Plant.png'
+import CowImage from '../assets/Cow.png'
+
+export default function CardProducts ({image, price, price2, name, tag, id}){
 
     return (
-        <a href={`/product/1`} className="products__list--item">
+        <a href={`/product/${id}`} className="products__list--item">
 
-             <img src="/product-01.png" alt="" />
+             <img src={image} alt="" />
             
-             <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-             <h4 className="products__list--name">Espresso</h4>
+             <h3 className="products__list--price">R$ {price} <span>R$ {price2}</span></h3>
+             <h4 className="products__list--name">{name}</h4>
               <div className="product__tag">
                  <img src={PlantImage} alt="planta" />
-               <span>Vegano</span>
+               <span>{tag}</span>
               </div>
                 </a>
+                
   )
 }
+//<div>
+    //{tag ? tag : <img src={CowImage} alt="vaca" />}
+  
+    
+//</div>
+
 
 
 

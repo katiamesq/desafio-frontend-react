@@ -1,6 +1,7 @@
 import PlantImage from '../assets/Plant.png'
 import CowImage from '../assets/Cow.png'
 import '../css/Home.css'
+import CardProducts from '../components/CardProducts'
 
 export function Home() {
   return (
@@ -18,78 +19,15 @@ export function Home() {
           <div className="container">
             <h2 className="products__title">Clássicos</h2>
             <div className="products__list">
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-01.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Espresso</h4>
-                <div className="product__tag">
-                  <img src={PlantImage} alt="planta" />
-                  <span>Vegano</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-02.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Americano</h4>
-                <div className="product__tag">
-                  <img src={PlantImage} alt="planta" />
-                  <span>Vegano</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="./product-03.png" alt="" />
-                <h3 className="products__list--price">R$ 8,00 <span>R$ 10,00</span></h3>
-                <h4 className="products__list--name">Café com leite</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-04.png" alt="" />
-                <h3 className="products__list--price">R$ 10,00</h3>
-                <h4 className="products__list--name">Cappuccino</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-05.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Latte</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-06.png" alt="" />
-                <h3 className="products__list--price">R$ 8,00 <span>R$ 10,00</span></h3>
-                <h4 className="products__list--name">Macchiato</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-07.png" alt="" />
-                <h3 className="products__list--price">R$ 8,00 <span>R$ 10,00</span></h3>
-                <h4 className="products__list--name">Mocha</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-08.png" alt="" />
-                <h3 className="products__list--price">R$ 8,00 <span>R$ 10,00</span></h3>
-                <h4 className="products__list--name">Irish Coffee</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
+              <CardProducts name={"Espresso"} price={"0,00"} price2={"0,00"} image={"/product-01.png"} tag={"Vegano"} id={1}/>
+              <CardProducts name={"Americano"} price={"0,00"} price2={"0,00"} image={"/product-02.png"} tag={"Vegano"} id={2}/>
+              <CardProducts name={"Café com leite"} price={"8,00"} price2={"10,00"} image={"/product-03.png"} tag={"Vegano"} id={3}/>
+              <CardProducts name={"Cappuccino"} price={"10,00"} image={"/product-04.png"} tag={"Contém lactose"} id={4}/>
+              <CardProducts name={"Latte"} price={"0,00"} price2={"0,00"} image={"/product-05.png"} tag={"Contém lactose"} id={5}/>
+              <CardProducts name={"Macchiato"} price={"8,00"} price2={"10,00"} image={"/product-06.png"} tag={"Contém lactose"} id={6}/>
+              <CardProducts name={"Mocha"} price={"8,00"} price2={"10,00"} image={"/product-07.png"} tag={"Contém lactose"} id={7}/>
+              <CardProducts name={"Irish Coffee"} price={"8,00"} price2={"10,00"} image={"/product-08.png"} tag={"Contém lactose"} id={8}/>
+              
             </div>
           </div>
         </section>
@@ -97,42 +35,10 @@ export function Home() {
           <div className="container">
             <h2 className="products__title">Gelados</h2>
             <div className="products__list">
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-09.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Cold Brew</h4>
-                <div className="product__tag">
-                  <img src={PlantImage} alt="planta" />
-                  <span>Vegano</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-10.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Frappuccino</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-11.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Café gelado com laranja e tônica</h4>
-                <div className="product__tag">
-                  <img src={PlantImage} alt="planta" />
-                  <span>Vegano</span>
-                </div>
-              </a>
-              <a href={`/product/1`} className="products__list--item">
-                <img src="/product-12.png" alt="" />
-                <h3 className="products__list--price">R$ 0,00 <span>R$ 0,00</span></h3>
-                <h4 className="products__list--name">Milk shake de café</h4>
-                <div className="product__tag">
-                  <img src={CowImage} alt="Lactose" />
-                  <span>Contém lactose</span>
-                </div>
-              </a>
+              <CardProducts name={"Cold Brew"} price={"0,00"} price2={"0,00"} image={"/product-09.png"} tag={"Vegano"} id={9}/>
+              <CardProducts name={"Frappuccino"} price={"0,00"} price2={"0,00"} image={"/product-10.png"} tag={"Contém lactose"} id={10}/>
+              <CardProducts name={"Café gelado com laranja tônica"} price={"0,00"} price2={"0,00"} image={"/product-11.png"} tag={"Vegano"} id={11}/>
+              <CardProducts name={"Milk shake de café"} price={"0,00"} price2={"0,00"} image={"/product-12.png"} tag={"Contém lactose"} id={12}/>
             </div>
           </div>
         </section>
