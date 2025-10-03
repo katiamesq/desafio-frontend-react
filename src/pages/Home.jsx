@@ -1,9 +1,133 @@
+import { useState } from "react";
 import PlantImage from '../assets/Plant.png'
 import CowImage from '../assets/Cow.png'
 import '../css/Home.css'
 import CardProducts from '../components/CardProducts'
 
 export function Home() {
+
+const [produtos, setProdutos] = useState([
+    {
+      id: 1,
+      name: "Espresso",
+      image: "/product-01.png",
+      descricao: "",
+      price: "000",
+      price2: "000",
+      tag: "Vegano",
+      categoria: "Clássicos",
+    },
+    {
+      id: 2,
+      name: "Americano",
+      image: "/product-02.png",
+      descricao: "",
+      price: "000",
+      price2: "000",
+      tag: "Vegano",
+      categoria: "Clássicos",
+    },
+    {
+      id: 3,
+      name: "Café com leite",
+      image: "/product-03.png",
+      descricao:"",
+      price: "800",
+      price2: "1000",
+      tag: "Vegano",
+      categoria: "Clássicos"
+    },
+    {
+      id: 4,
+      name: "Cappuccino",
+      image: "/product-04.png",
+      descricao: "",
+      price: "1000",
+      tag: "Contém lactose",
+      categoria: "Clássicos",      
+    },
+    {
+      id: 5,
+      name: "Latte",
+      image: "/product-05.png",
+      descricao: "",
+      price: "000",
+      price2: "000",
+      tag: "Contém lactose",
+      categoria: "Clássicos",
+    },
+    {
+      id: 6,
+      name: "Macchiato",
+      image: "/product-06.png",
+      descricao: "",
+      price: "800",
+      price2: "1000",
+      tag: "Contém lactose",
+      categoria: "Clássicos",
+    },
+    {
+      id: 7,
+      name: "Mocha",
+      image: "/product-07.png",
+      descricao: "",
+      price: "800",
+      price2: "1000",
+      tag: "Contém lactose",
+      categoria: "Clássicos"
+    },
+    {
+      id: 8,
+      name: "Irish Coffe",
+      image: "/product-08.png",
+      descricao:"",
+      price: "800",
+      price2: "1000",
+      tag: "Contém lactose",
+      categoria:"Clássicos"
+    },
+    {
+      id: 9,
+      name: "Cold Brew",
+      image: "/product-09.png",
+      descricao:"",
+      price: "000",
+      price2: "000",
+      tag: "Vegano",
+      categoria:"Gelados",      
+    },
+    {
+      id: 10,
+      name: "Frappuccino",
+      image: "/product-10.png",
+      descricao:"",
+      price: "000",
+      price2: "000",      
+      tag: "Contém lactose",
+      categoria:"Gelados",
+    },
+    {
+      id: 11,
+      name: "Café gelado com laranja tônica",
+      image: "/product-11.png",
+      descricao:"",
+      price: "000",
+      price2: "000",      
+      tag: "Vegano",
+      categoria:"Gelados",
+    },
+    {
+      id: 12,
+      name: "Milk shake de café",
+      image: "/product-12.png",
+      descricao:"",
+      price: "000",
+      price2: "000",      
+      tag: "Contém lactose",
+      categoria:"Gelados",
+    },
+    ]);
+
   return (
     <>    
       <main>
