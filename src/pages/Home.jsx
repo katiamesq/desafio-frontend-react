@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom'
 import db from '../../db.json'
 import PlantImage from '../assets/Plant.png'
 import CowImage from '../assets/Cow.png'
@@ -149,7 +150,7 @@ const [produtos, setProdutos] = useState([
         {produtos
               .filter((p) => p.categoria === "Clássicos")
               .map((produto) => (
-                <a
+                <Link
                     key={produto.id}
                     href={`/product/${produto.id}`}
                     className="products__list--item"
@@ -160,9 +161,13 @@ const [produtos, setProdutos] = useState([
                     </h3>
                     <h4 className="products__list--name">{produto.name}</h4>
                     <div className="product__tag">
+                      <img 
+                       src={produto.tag === "Vegano" ? PlantImage : CowImage} 
+                      alt={produto.tag} 
+                       />
                       <span>{produto.tag}</span>
                 </div>
-                  </a>
+                  </Link>
               ))}
              </div> 
        </div>
@@ -175,7 +180,7 @@ const [produtos, setProdutos] = useState([
             {produtos
               .filter((p) => p.categoria === "Gelados")
               .map((produto) => (
-                <a
+                <Link
                     key={produto.id}
                     href={`/product/${produto.id}`}
                     className="products__list--item"
@@ -196,7 +201,7 @@ const [produtos, setProdutos] = useState([
                        />
                       <span>{produto.tag}</span>
                     </div>
-                  </a>
+                  </Link>
                   ))}
                </div>
                </div>
