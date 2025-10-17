@@ -27,3 +27,4 @@ export default function CardProducts ({image, price, price2, name, tag, id}){
 
 
 
+

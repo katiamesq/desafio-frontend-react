@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import db from '../../db.json'
 import PlantImage from '../assets/Plant.png'
 import CowImage from '../assets/Cow.png'
 import '../css/Home.css'
@@ -130,7 +130,7 @@ const [produtos, setProdutos] = useState([
     ]);
 
   return (
-    <>    
+  
       <main>
         <section className="slogan">
           <div className="container">
@@ -140,34 +140,77 @@ const [produtos, setProdutos] = useState([
             </p>
           </div>
         </section>
+
         <section className="products">
           <div className="container">
             <h2 className="products__title">Clássicos</h2>
             <div className="products__list">
-              <CardProducts name={"Espresso"} price={"0,00"} price2={"0,00"} image={"/product-01.png"} tag={"Vegano"} id={1}/>
-              <CardProducts name={"Americano"} price={"0,00"} price2={"0,00"} image={"/product-02.png"} tag={"Vegano"} id={2}/>
-              <CardProducts name={"Café com leite"} price={"8,00"} price2={"10,00"} image={"/product-03.png"} tag={"Vegano"} id={3}/>
-              <CardProducts name={"Cappuccino"} price={"10,00"} image={"/product-04.png"} tag={"Contém lactose"} id={4}/>
-              <CardProducts name={"Latte"} price={"0,00"} price2={"0,00"} image={"/product-05.png"} tag={"Contém lactose"} id={5}/>
-              <CardProducts name={"Macchiato"} price={"8,00"} price2={"10,00"} image={"/product-06.png"} tag={"Contém lactose"} id={6}/>
-              <CardProducts name={"Mocha"} price={"8,00"} price2={"10,00"} image={"/product-07.png"} tag={"Contém lactose"} id={7}/>
-              <CardProducts name={"Irish Coffee"} price={"8,00"} price2={"10,00"} image={"/product-08.png"} tag={"Contém lactose"} id={8}/>
+
+        {produtos
+              .filter((p) => p.categoria === "Clássicos")
+              .map((produto) => (
+                <a
+                    key={produto.id}
+                    href={`/product/${produto.id}`}
+                    className="products__list--item"
+                  >
+                    <img src={produto.image} alt={produto.name} />
+                    <h3 className="products__list--price">
+                      R$ {produto.price} <span>R$ {produto.price2}</span>
+                    </h3>
+                    <h4 className="products__list--name">{produto.name}</h4>
+                    <div className="product__tag">
+                      <span>{produto.tag}</span>
+                </div>
+                  </a>
+              ))}
+             </div> 
+       </div>
+      </section>
+     
+      <section className="products">
+        <div className="container">
+          <h2 className="products__title">Gelados</h2>
+          <div className="products__list">
+            {produtos
+              .filter((p) => p.categoria === "Gelados")
+              .map((produto) => (
+                <a
+                    key={produto.id}
+                    href={`/product/${produto.id}`}
+                    className="products__list--item"
+                  >
+                    <img src={produto.image} alt={produto.name} />
+                    <h3 className="products__list--price">
+                      R$ {produto.price} <span>R$ {produto.price2}</span>
+                    </h3>
+                    <h4 className="products__list--name">{produto.name}</h4>
+                    <div className="product__tag">
+                      <span>{produto.tag}</span>
+                    </div>
+                    <div className="product__tag">
+
+                    <img 
+                       src={produto.tag === "Vegano" ? PlantImage : CowImage} 
+                      alt={produto.tag} 
+                       />
+                      <span>{produto.tag}</span>
+                    </div>
+                  </a>
+                  ))}
+               </div>
+               </div>
+              </section>
+                </main>
               
-            </div>
-          </div>
-        </section>
-        <section className="products">
-          <div className="container">
-            <h2 className="products__title">Gelados</h2>
-            <div className="products__list">
-              <CardProducts name={"Cold Brew"} price={"0,00"} price2={"0,00"} image={"/product-09.png"} tag={"Vegano"} id={9}/>
-              <CardProducts name={"Frappuccino"} price={"0,00"} price2={"0,00"} image={"/product-10.png"} tag={"Contém lactose"} id={10}/>
-              <CardProducts name={"Café gelado com laranja tônica"} price={"0,00"} price2={"0,00"} image={"/product-11.png"} tag={"Vegano"} id={11}/>
-              <CardProducts name={"Milk shake de café"} price={"0,00"} price2={"0,00"} image={"/product-12.png"} tag={"Contém lactose"} id={12}/>
-            </div>
-          </div>
-        </section>
-      </main>      
-    </>
-  )
-}
+                 );
+               }
+
+              
+                
+              
+    
+  
+    
+    
+        
