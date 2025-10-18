@@ -46,7 +46,7 @@ export function Home() {
 
   return (
     <main>
-      {/* Slogan */}
+     
       <section className="slogan">
         <div className="container">
           <h1 className="slogan__title">Fragrância e sabor elevado ao cubo</h1>
@@ -56,7 +56,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Clássicos */}
+    
       <section className="products">
         <div className="container">
           <h2 className="products__title">Clássicos</h2>
@@ -64,7 +64,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Gelados */}
+     
       <section className="products">
         <div className="container">
           <h2 className="products__title">Gelados</h2>
